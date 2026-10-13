@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: #0E8A3E;
+  --color-accent-dark: #0A6B30;
+  --color-accent-light: #E8F5EC;
+}
+
+/* B2C universe: every bg-forest/text-forest/border-forest class across the
+   whole app automatically switches to blue -- no per-component changes */
+html.univers-b2c {
+  --color-accent: #0B72AC;
+  --color-accent-dark: #075985;
+  --color-accent-light: #ECFCCB;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #F6F7F5;
+  color: #1F2A24;
+}
+
+::selection {
+  background: #C9A227;
+  color: white;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(-16px); }
+  50% { transform: translateY(16px); }
+}
+
+.watermark-float {
+  animation: floatY 8s ease-in-out infinite;
+}
