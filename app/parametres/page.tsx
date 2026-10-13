@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRole } from '@/lib/use-role';
 import UtilisateursSection from './utilisateurs-section';
 import AgentPinsSection from './agent-pins-section';
+import ExportAccessButton from './export-access-button';
 import AgentSummarySection from './agent-summary-section';
 import QualiteCriteresSection from './qualite-criteres-section';
 import CommercialZonesSection from './commercial-zones-section';
@@ -254,6 +255,7 @@ export default function ParametresPage() {
             Comptes individuels de l'equipe. Les anciens mots de passe partages
             (Admin/Visualisation/Relanceur) continuent aussi de fonctionner en secours.
           </p>
+          <ExportAccessButton />
           <UtilisateursSection />
         </>
       )}
@@ -261,6 +263,7 @@ export default function ParametresPage() {
       {isAdmin && current === 'agents' && (
         <>
           <h2 className="text-xl font-bold text-ink mb-1">Agents de prospection</h2>
+          <ExportAccessButton />
           <AgentPinsSection />
         </>
       )}
